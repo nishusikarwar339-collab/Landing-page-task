@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #64748B;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#6D5DFC] text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#5A4FE0] transition-all duration-200 text-base inline-flex items-center justify-center;
+  }
+
+  .btn-outline {
+    @apply border border-[#E2E8F0] text-[#0F172A] font-semibold px-6 py-3 rounded-xl hover:border-[#6D5DFC] hover:text-[#6D5DFC] transition-all duration-200 text-base bg-white inline-flex items-center justify-center gap-3;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-widest uppercase text-[#6D5DFC];
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-heading leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-body text-base leading-relaxed max-w-lg mx-auto;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #6D5DFC;
+  border-radius: 3px;
+}
